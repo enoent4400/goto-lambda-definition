@@ -6,9 +6,9 @@
     "type": "git",
     "url": "https://github.com/enoent4400/goto-lambda-definition"
   },
-  "version": "0.0.1",
+  "version": "0.0.4",
   "engines": {
-    "vscode": "^1.93.0"
+    "vscode": "^1.89.0"
   },
   "categories": [
     "Other"
@@ -56,7 +56,7 @@
   "devDependencies": {
     "@types/mocha": "^10.0.7",
     "@types/node": "20.x",
-    "@types/vscode": "^1.93.0",
+    "@types/vscode": "^1.89.0",
     "@typescript-eslint/eslint-plugin": "^8.3.0",
     "@typescript-eslint/parser": "^8.3.0",
     "@vscode/test-cli": "^0.0.10",

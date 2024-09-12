@@ -5,11 +5,15 @@ import * as fsSync from 'fs'
 import * as yaml from 'js-yaml'
 
 const cfnTags = [
-  '!Ref', '!Sub', '!GetAtt', '!Join', '!If', '!Not', '!Equals', '!Or', '!And',
-  '!Condition', '!FindInMap', '!Select', '!Split', '!ImportValue'
+  '!Ref', '!Sub', '!GetAtt', '!Join', '!If', '!Not', '!Or', '!And',
+  '!Condition', '!FindInMap', '!Select', '!Split', '!ImportValue', '!Equals', '!If'
 ]
 
-const customTypes = cfnTags.map(tag => new yaml.Type(tag, { kind: 'scalar' }))
+const customScalarTypes = cfnTags.map(tag => new yaml.Type(tag, { kind: 'scalar' }))
+const customSequenceTypes = cfnTags.map(tag => new yaml.Type(tag, { kind: 'sequence' }))
+
+const customTypes = [...customScalarTypes, ...customSequenceTypes]
+
 const CFN_SCHEMA = yaml.DEFAULT_SCHEMA.extend(customTypes)
 
 function getLambdaName(filePath: string): string | null {
