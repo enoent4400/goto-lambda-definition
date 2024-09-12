@@ -2,6 +2,10 @@
   "name": "goto-lambda-definition",
   "displayName": "GOTO Lambda Definition",
   "description": "Simple utility to navigate between your Lambda function and resources defined in template.yaml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enoent4400/goto-lambda-definition"
+  },
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.93.0"
